@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#FAFAFA">
+
+    <!-- Title -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Danh sách số đơn giản"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:textColor="#3E4A89"
+        android:layout_marginBottom="16dp" />
+
+    <!-- EditText nhập số nguyên dương n -->
+    <EditText
+        android:id="@+id/et_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số nguyên dương n"
+        android:inputType="number"
+        android:backgroundTint="#3E4A89"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- RadioGroup chứa các lựa chọn -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/radiogroup_background"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chọn loại số:"
+            android:textSize="18sp"
+            android:textColor="#3E4A89"
+            android:layout_marginBottom="8dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_even"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số chẵn"
+                android:textColor="#3E4A89"/>
+
+            <RadioButton
+                android:id="@+id/rb_odd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số lẻ"
+                android:textColor="#3E4A89"
+                android:layout_marginStart="16dp"/>
+
+            <RadioButton
+                android:id="@+id/rb_square"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Số chính phương"
+                android:textColor="#3E4A89"
+                android:layout_marginStart="16dp"/>
+        </RadioGroup>
+    </LinearLayout>
+
+    <!-- Button hiển thị danh sách -->
+    <Button
+        android:id="@+id/btn_show"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:backgroundTint="#3E4A89"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginBottom="16dp"
+        android:elevation="4dp"/>
+
+    <!-- ListView hiển thị danh sách số thỏa mãn -->
+    <ListView
+        android:id="@+id/lv_result"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"
+        android:background="#FFFFFF"
+        android:padding="8dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- TextView hiển thị thông báo lỗi -->
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#D32F2F"
+        android:text=""
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>
